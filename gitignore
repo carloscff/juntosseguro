@@ -130,7 +130,7 @@ dist
 .pnp.*
 
 # Local .terraform directories
-**/Users/carlosfabianofrancisco/Documents/Projetos/jsnodejslast/juntosseguro/aws/.terraform/*
+**/.terraform/*
 
 # .tfstate files
 *.tfstate
@@ -166,3 +166,10 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+# Ignore terraform locks
+.terraform.lock.hcl
+
+# Ignore terragrunt cache
+.terragrunt-cache
+
+testing/
