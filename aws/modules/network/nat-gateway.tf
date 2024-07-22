@@ -1,4 +1,4 @@
-resource "aws_eip" "vpc_iep" {
+resource "aws_eip" "vpc_eip" {
     vpc = true
     tags = {
         Name = format("%s-eip", var.cluster_name)
@@ -6,7 +6,7 @@ resource "aws_eip" "vpc_iep" {
 }
 
 resource "aws_nat_gateway" "nat" {
-    allocation_id   = aws_eip.vpc_iep.id
+    allocation_id   = aws_eip.vpc_eip.id
     subnet_id       = aws_subnet.public_subnet_1a.id
 
     tags = {
