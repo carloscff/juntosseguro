@@ -130,7 +130,7 @@ dist
 .pnp.*
 
 # Local .terraform directories
-/Users/carlosfabianofrancisco/Documents/Projetos/jsnodejslast/juntosseguro/aws/.terraform/*
+/aws/.terraform/*
 
 # .tfstate files
 *.tfstate
