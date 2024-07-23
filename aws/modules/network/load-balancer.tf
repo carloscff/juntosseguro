@@ -18,7 +18,7 @@ resource "aws_lb" "eks-lb" {
   name               = format("%s-load-balancer", var.cluster_name)
   internal           = false
   load_balancer_type = "application"
-  security_groups    = [var.security_group]
+  security_groups    = [var.security_group.id]
   subnets            = [aws_subnet.private_subnet_1a.id, aws_subnet.private_subnet_1c.id]
 
   enable_deletion_protection = false
