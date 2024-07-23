@@ -3,7 +3,7 @@ module "network" {
   
   cluster_name  = var.cluster_name
   aws_region    = var.aws_region
-  security_group = var.security_group
+  security_group = module.master.security_group
 }
 
 module "master" {
